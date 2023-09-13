@@ -1,0 +1,14 @@
+C:\Users\jdrma\Documents\csharp\TestProject\bin\Debug\net7.0\TestProject.exe
+C:\Users\jdrma\Documents\csharp\TestProject\bin\Debug\net7.0\TestProject.deps.json
+C:\Users\jdrma\Documents\csharp\TestProject\bin\Debug\net7.0\TestProject.runtimeconfig.json
+C:\Users\jdrma\Documents\csharp\TestProject\bin\Debug\net7.0\TestProject.dll
+C:\Users\jdrma\Documents\csharp\TestProject\bin\Debug\net7.0\TestProject.pdb
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.AssemblyInfo.cs
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.dll
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\refint\TestProject.dll
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.pdb
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\TestProject.genruntimeconfig.cache
+C:\Users\jdrma\Documents\csharp\TestProject\obj\Debug\net7.0\ref\TestProject.dll
