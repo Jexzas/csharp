@@ -5,7 +5,27 @@
     public decimal average;
     public string finalGrade = "";
     public void addScore(int score) {
-        scores.Append(score);
+        Array.Resize(ref scores, scores.Length + 1);
+        scores[scores.Length - 1] = score;
+    }
+    public int getExtraCredit() {
+        int credits = 0;
+        foreach (int score in scores) {
+            if (Array.IndexOf(scores, score) >= 5) {
+                credits += score;
+            }
+        }
+        return credits;
+    }
+    public decimal getScoreNoExtra() {
+        int noEcScore = 0;
+        foreach (int score in scores) {
+            if(Array.IndexOf(scores, score) <= 4) {
+                noEcScore += score;
+            }
+        }
+        decimal thisAvg = noEcScore / 5;
+        return thisAvg;
     }
     public void getFinalGrade() {
         foreach (int score in scores) {
@@ -16,7 +36,7 @@
             }
         }
 
-        average = finalScore / scores.Length;
+        average = finalScore / 5;
 
         if (average > 96) {
             finalGrade = "A+";
@@ -57,24 +77,31 @@
         this.name = name;
     }
 
+    public string displayScoresAll() {
+        string display = "";
+        foreach (int score in scores) {
+            display += score.ToString() + " ";
+        }
+        return display;
+    }
+
 };
 
 class Program {
     public static void Main(String[] args) {
         Student sophia = new Student(66, 76, 77, 66, 99, "Sophia");
-        sophia.getFinalGrade();
         Student andrew = new Student(66, 98, 95, 78, 80, "Andrew");
-
         andrew.addScore(15);
-        andrew.getFinalGrade();
         Student emma = new Student(77, 77, 77, 77, 78, "Emma");
-        emma.getFinalGrade();
         Student logan = new Student(99, 1, 1, 99, 1, "Logan");
-        logan.getFinalGrade();
         Student[] students = {sophia, andrew, emma, logan};
-        Console.WriteLine($"Student\t\tGrade");
+        Console.WriteLine($"Student\t\tExam Score\tOverall Grade\tExtra Credit");
         foreach(Student student in students){
-            Console.WriteLine($"{student.name}:\t\t{student.average}\t{student.finalGrade}");
+            student.getFinalGrade();
+            decimal ecPoints = student.average - student.getScoreNoExtra();
+            Console.WriteLine($"{student.name}:\t\t{student.getScoreNoExtra()}\t\t{student.average}\t{student.finalGrade}\t{student.getExtraCredit()} ({ecPoints})");
+            
+            Console.WriteLine(student.displayScoresAll());
         }
     }
 }
